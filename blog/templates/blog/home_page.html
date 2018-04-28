@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Hi welcome to my Blog</title>
+</head>
+<body>
+
+<!-- Site Header -->
+<h1>Hello, i'm Sally. Welcome to my Blog^-^</h1>
+
+<!--Blog Post -->
+<img src="http://img01.taopic.com/150414/240408-15041406324324.jpg">
+<h2> my first blog post Woo!</h2>
+<p>here is my first blog post. one day at the mall I bought a hamburger......</p>
+
+<!-- like And Commmet-->
+<button>hahahahahaha</button>
+<button>like</button>
+<h2>Leave a Comment</h2>
+<from action="{% url 'blog:home_page' %}" method="POST">
+{% csrf_token %}
+<input type="text" placeholder="Plaese Enter Your username" name="username"><br><br>
+<textarea name="comment" placeholder="Please Enter Your Comment"></textarea><br>
+<input type="submit" value="Post Me!">
+</form>
+
+<h2>Comments</h2>
+User {{comment.user}} says: {{comment}}
+</body>
+</html>
